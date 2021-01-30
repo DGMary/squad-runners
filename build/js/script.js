@@ -74,6 +74,7 @@ $(document).ready(function () {
   }
   
   $('.countdown').final_countdown();
+  $('.user-list').length && getInfo();
 });
 
 $(window).on('resize', function () {
@@ -116,7 +117,7 @@ function initCountdown() {
   });
 }
 
-getInfo();
+
 function getInfo() {
   const request = new Request('https://squad-runners.in.ua/api/users/all');
   const myList = document.querySelector('.user-list');
