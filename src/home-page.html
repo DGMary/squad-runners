@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('components/templates/head.html', {
+    "cssLink": "/css/home-page.css"
+    }
+  )
+  <body>
+    @@include('components/templates/header.html')
+    <main class="main">
+      
+      <div class="section promo-section" style="background-image: url(/img/promo-bg.jpg);">
+        <div class="container">
+          <div class="promo-content">
+            <div class="promo-text">
+              <p class="promo-p">
+                сообщество людей, которые  по-настоящему любят бег, для развития и объединения бегового движения Украины!
+              </p>
+              <div class="btn-holder">
+                <a href="https://linktr.ee/SquadUArunners" target="__blank" class="btn btn-primary">Присоединиться</a>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section countdown-section">
+        <div class="section-title">
+          <div class="section-title-text">Забеги</div>
+        </div>
+        <div class="section-body">
+          <div class="container">
+            <div class="countdown-title">
+              ДО СТАРТА ОСТАЛОСЬ
+            </div>
+            @@include('components/countdown.html')
+          </div>
+        </div>
+      </div>
+
+      <div class="section races-section">
+        <div class="section-body">
+          <div class="container">
+            <div class="races-slider slider js-slider-races">
+              <div class="slide-item">
+                <a href="#" class="slide-item-link">
+                  <div class="slide-img">
+                    <img src="../img/race-01.jpg" alt="Races">
+                  </div> 
+                  <h3 class="slide-item-title">Ladies Run 2019</h3>
+                  <span class="slide-text">22.12 Николаев</span>
+                </a>
+              </div>
+              <div class="slide-item">
+                <a href="#" class="slide-item-link">
+                  <div class="slide-img">
+                    <img src="../img/race-01.jpg" alt="Races">
+                  </div> 
+                  <h3 class="slide-item-title">ІІІ-й новорічний пробіг "Вперед За Бажанням"</h3>
+                  <span class="slide-text">22.12 Николаев</span>
+                </a>
+              </div>
+              <div class="slide-item">
+                <a href="#" class="slide-item-link">
+                  <div class="slide-img">
+                    <img src="../img/race-01.jpg" alt="Races">
+                  </div> 
+                  <h3 class="slide-item-title">Как Кипчоге!</h3>
+                  <span class="slide-text">22.12 Николаев</span>
+                </a>
+              </div>
+              <div class="slide-item">
+                <a href="#" class="slide-item-link">
+                  <div class="slide-img">
+                    <img src="../img/race-01.jpg" alt="Races">
+                  </div> 
+                  <h3 class="slide-item-title">Клубные соревнования TR</h3>
+                  <span class="slide-text">22.12 Николаев</span>
+                </a>
+              </div>
+              <div class="slide-item">
+                <a href="#" class="slide-item-link">
+                  <div class="slide-img">
+                    <img src="../img/race-01.jpg" alt="Races">
+                  </div> 
+                  <h3 class="slide-item-title">Ladies Run 2019</h3>
+                  <span class="slide-text">22.12 Николаев</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      @@include('components/info.html')
+
+      @@include('components/users-list.html')
+
+      @@include('components/instagram.html')
+    </main>
+    @@include('components/templates/footer.html')
+  </body>
+</html>

@@ -1,0 +1,119 @@
+.footer {
+  background-color: rgb(12, 9, 13);
+  position: relative;
+  padding: 1rem 0px;
+  &-container {
+    margin: 0px auto;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 15px;
+  }
+  &-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      height: 100px;
+      & > * {
+        fill: rgb(255, 233, 40);
+      }
+    }
+  }
+  &-title {
+    color: rgb(12, 9, 13);
+    margin: 0px 0px 1rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: none;
+    text-align: left;
+  }
+  &-list {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 400;      
+      font-size: 2rem;
+    }
+    svg {
+      margin-right: 10px;
+    }
+    li + li {
+      margin-top: 10px;
+    }
+  }
+  &-socials {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    a {
+      display: block;
+      transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+      border-radius: 50%;
+      font-size: 3rem;
+      color: rgb(12, 9, 13);
+    }
+    li + li {
+      margin-left: 10px;
+    }
+  }
+
+  a {
+    color: rgb(255, 233, 40);
+    text-align: center;
+    &:focus,
+    &:hover {
+      color: rgb(239, 43, 49);
+    }
+  }
+}
+@media (min-width:769px) {
+  .footer {
+    background-color: rgb(255, 233, 40);
+    &-container {      
+      display: flex;
+      justify-content: space-between;
+    }
+    &-list {
+      font-size: 1.6rem;
+      text-align: left;
+      a {
+        align-items: flex-start;
+      }
+    }
+    &-title {
+      display: block;
+    }
+    &-col {
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+    }
+    &-logo {
+      svg {
+        & > * {
+          fill: rgb(12, 9, 13);
+        }
+      }
+    }
+    a {
+      color: rgb(12, 9, 13);
+    }
+    li:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}

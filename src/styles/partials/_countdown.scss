@@ -1,0 +1,85 @@
+.countdown {
+  &-container {
+    margin-bottom: 2rem;    
+    width: 100%;
+
+  }
+  &-section {
+    .section-body {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3.5rem 2rem;
+      background-color: rgb(12, 9, 13);
+    }
+  }
+  &-title {
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px 0px 1rem;
+    color: rgb(255, 233, 40);
+  }
+}
+.clock {
+  &-row {
+    display: flex;
+  }
+  &-item {
+    width: 25%;
+    position: relative;
+    .wrap {
+      margin: 0 auto;
+    }
+    .val {
+      color: $white;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      line-height: 1;
+      text-align: center;
+      font-size: 50px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .type-time {
+      text-align: center;
+      color: $white;
+      font-size: 20px;
+      line-height: 1.2;
+      margin: 10px 0 0;
+    }
+  }
+  &-canvas {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    &:before {
+      content:"";
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      top: 5px;
+      left: 5px;
+      border: 2px solid #777;
+      border-radius: 50%;
+    }
+  }
+}
+@media (max-width:640px) {
+  .clock {
+    &-row {
+      flex-wrap: wrap;
+    }
+    &-item {
+      width: 50%;
+      margin-top: 20px;
+    }
+  }
+  .countdown-section .section-body {
+    padding: 0;
+  }
+}
