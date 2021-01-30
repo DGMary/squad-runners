@@ -5,7 +5,7 @@
     &:after {
       content: "";
       position: absolute;
-      top: -50px;
+      top: -100px;
       bottom: -20px;
       left: 0;
       right: 0;
@@ -27,6 +27,12 @@
           max-width: 230px;
           margin: auto;
           display: block;
+          &:hover {
+            .slide-img {
+              box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px 1px;
+              transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+            }
+          }
         }
       }
       &-text {
@@ -39,6 +45,7 @@
         width: 100%;
         position: relative;
         display: block;
+        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
         img {
           position: absolute;
           top: 0;
@@ -62,6 +69,9 @@
     .container {
       position: relative;
     }
+    .btn-holder {
+      margin-top: 30px;
+    }
   }
 }
 .start {
@@ -83,6 +93,30 @@
   }
   &-link {
     display: inline-block; 
+  }
+}
+@media(max-width:767px) {
+  .races {
+    &-slider {
+      position: relative;
+      .swiper {
+        &-container {
+          padding-bottom: 50px;
+        }
+        &-button {
+          &-prev {
+            top: auto;
+            bottom: -10px;
+            left: calc(50% - 60px);
+          }
+          &-next {
+            top: auto;
+            bottom: -10px;
+            right: calc(50% - 60px);
+          }
+        }
+      }
+    }
   }
 }
 @media (min-width:768px) {
@@ -115,8 +149,8 @@
         }
       }
       &:after {
-        top: -150px;
-        bottom: 35%;
+        top: -200px;
+        bottom: 50%;
       }
     }
   }
