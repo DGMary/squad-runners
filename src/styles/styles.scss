@@ -1,8 +1,8 @@
 @import 'vendor/normalize.scss';
-@import 'vendor/slick.scss';
+@import 'vendor/swiper.scss';
 
 @import 'partials/variables';
-@import 'partials/slick.scss';
+@import 'partials/slider.scss';
 @import 'partials/fonts';
 // @import 'partials/icons';
 @import 'partials/layout';
@@ -23,3 +23,9 @@
 // // // @import 'partials/preloader';
 // // // @import 'partials/subscribe';
 // // // @import 'partials/auth';
+
+@import 'partials/user-list';
+@import 'partials/instagram';
+@import 'partials/info';
+@import 'partials/countdown';
+@import 'partials/home-page';

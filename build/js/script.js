@@ -1,51 +1,82 @@
 $(document).ready(function () {
-  $('.js-slider-instagram').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [      
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
+  // $('.js-slider-instagram').slick({
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 300,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 3,
+  //   responsive: [      
+  //     {
+  //       breakpoint: 991,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 580,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1
+  //       }
+  //     }
+  //   ]
+  // });
+
+  let promoSwiper = new Swiper(".js-slider-races .swiper-container", {
+    loop: false,
+    watchOverflow: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 30,
       },
-      {
-        breakpoint: 580,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 50,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      },
+    },
   });
 
-  $('.js-slider-races').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [      
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 580,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
+  // $('.js-slider-races').slick({
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 300,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 4,
+  //   responsive: [      
+  //     {
+  //       breakpoint: 991,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 580,
+  //       settings: {
+  //         slidesToShow: 1.5,
+  //         slidesToScroll: 1
+  //       }
+  //     }
+  //   ]
+  // });
 
   /* scroll to top */
   $(window).scroll(function () {

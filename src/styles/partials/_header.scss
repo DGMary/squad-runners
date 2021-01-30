@@ -22,6 +22,12 @@
     }
     .header-list a {
       color: $yellow2;
+      &.active {
+        color: $black;
+        &:after {
+          background-color: rgb(239, 43, 49);
+        }
+      }
     }
   }
   &-main {
@@ -106,7 +112,7 @@
 }
 .opened-burger {
   .header-menu {
-    right: -12px;
+    right: 0;
     transition: right .4s linear;
   }
   .burger-menu {
@@ -134,9 +140,9 @@
       bottom: 0;
       right: 0;
       z-index: 10;
-      background-color:$black;
-      width: 80%;
-      right: -100%;
+      background-color: rgba(0,0,0,.9);
+      width: 375px;
+      right: -380px;
       transition: right .4s linear;
       padding: 30px 20px 20px;
       border-bottom: 4px solid $yellow2;
@@ -148,12 +154,22 @@
     }
     &-list {
       color: #ffffff;
+      .active {
+        color: $yellow;
+      }
     }    
   }
   .logo {
     .runners,
     .squad {
       display: none;
+    }
+  }
+}
+@media (max-width:374px) {
+  .header {
+    &-menu {
+      width: 320px;
     }
   }
 }
