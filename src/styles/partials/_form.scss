@@ -30,8 +30,12 @@ label {
     color: rgb(253, 255, 252);
     &:hover {  
       color: rgb(253, 255, 252);
+      opacity: 1;
       // background-color: $btnHover; 
-      // opacity: 1;  
+      // opacity: 1; 
+      &:after {
+        transform: skewY(0deg);
+      } 
     }
     &:active,
     &:focus { 
@@ -79,6 +83,13 @@ label {
       transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
       background-color: rgb(255, 233, 40);
       transform: skewY(-4deg);
+    }
+    &:hover {
+      opacity: 1;
+      color: $black;
+      &:after {
+        transform: skewY(0deg);
+      }
     }
   }
   // &-outline {
