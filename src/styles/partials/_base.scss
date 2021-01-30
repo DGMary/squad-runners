@@ -72,6 +72,19 @@
     }
   }
 }
+.loader {
+  text-align: center;
+  &:before {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/loader.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 @media (min-width:769px) {
 
 }
