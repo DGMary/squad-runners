@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 20px 0;
+    margin: 30px 0;
   }
   &-item {
     text-align: center;
@@ -20,7 +20,7 @@
     height: 140px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 20px;
+    margin: 0 auto 15px;
     transition: .3s linear;
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px 1px;
@@ -28,6 +28,9 @@
   }
   &-title {
     font-size: 20px;
+  }
+  &-section {
+    margin-bottom: 60px;
   }
 }
 .about {
@@ -42,9 +45,24 @@
     margin-bottom: 40px;
     .team-item {
       text-align: center;
-      margin: 40px auto 20px;
+      margin: 0 auto 30px;
       max-width: 180px;
       width: 180px;
+    }
+  }
+  &-socials {
+    justify-content: center;
+    svg {
+      fill: $black;
+    }
+    .social-link {
+      width: 36px;
+      min-width: 36px;
+      height: 36px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
@@ -59,13 +77,20 @@
     &-text {
       width: calc(100% - 252px);
       padding-right: 40px;
+      padding-left: 20px;
       
     }
     &-block {
       display: flex;
       flex-direction: row-reverse;  
+      margin-top: 30px;
       p {
         font-size: 20px;
+        line-height:1.25;
+      }
+      .btn-holder {
+        margin-top: 50px;
+        margin-bottom: 46px;
       }
       
     }

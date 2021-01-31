@@ -203,6 +203,9 @@ body::-webkit-scrollbar-track {
     // margin: 0 0 60px;
     &-title-text {
       font-size: 48px;
+      &.text-sm {
+        font-size: 30px;
+      }
     }
   }
   .main {
