@@ -30,3 +30,44 @@
     font-size: 20px;
   }
 }
+.about {
+  &-block {
+    p {
+      margin: 0 0 20px;
+      font-size: 18px;
+    }
+    .btn-holder {
+      margin: 30px 0;
+    }
+    margin-bottom: 40px;
+    .team-item {
+      text-align: center;
+      margin: 40px auto 20px;
+      max-width: 180px;
+      width: 180px;
+    }
+  }
+}
+@media(min-width:768px) {
+  .about {
+    &-aside {
+      width: 252px;
+      min-width: 252px;
+      text-align: center;
+      
+    }
+    &-text {
+      width: calc(100% - 252px);
+      padding-right: 40px;
+      
+    }
+    &-block {
+      display: flex;
+      flex-direction: row-reverse;  
+      p {
+        font-size: 20px;
+      }
+      
+    }
+  }
+}
