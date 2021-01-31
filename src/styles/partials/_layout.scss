@@ -101,6 +101,12 @@ img {
         font-size: 6rem;
       }
     }
+    &-sm {
+      font-size: 30px;
+      text-align: center;
+      margin:10px auto 20px;
+      font-weight: bold;
+    }
     &:before {
       content: "";
       display: block;      

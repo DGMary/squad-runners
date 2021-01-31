@@ -1,0 +1,32 @@
+.team {
+  &-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  &-item {
+    text-align: center;
+    width: 20%;
+    min-width: 170px;
+    margin-bottom: 20px;
+    &:hover {
+      color: #000000;
+    }
+  }
+  &-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    transition: .3s linear;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px 1px;
+    }
+  }
+  &-title {
+    font-size: 20px;
+  }
+}
