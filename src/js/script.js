@@ -121,10 +121,8 @@ function initCountdown() {
 function getInfo() {
   const request = new Request('https://squad-runners.in.ua/api/users/all');
   const myList = document.querySelector('.user-list');
-  myList.classList.add('loader');
   fetch(request)
-  .then(response => {
-    
+  .then(response => {    
     if (response.status === 200) {      
       return response.json();      
     } else {
