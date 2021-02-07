@@ -19566,7 +19566,6 @@ return jQuery;
 function initCountdown(){
   const endTime = document.getElementById('js-countdown').getAttribute('data-time');
   const radiusEl = document.getElementById('js-countdown').getAttribute('data-radius');
- 
   
   const end = new Date(endTime).getTime();
   const dayEl = document.getElementById('days');
@@ -19578,8 +19577,6 @@ function initCountdown(){
   const minutes = seconds * 60;
   const hours = minutes * 60;
   const days = hours * 24;
-  
-  
   
   const x = setInterval(function () {
   
