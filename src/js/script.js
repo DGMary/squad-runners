@@ -73,8 +73,8 @@ $(document).ready(function () {
     });
   }
   
-  $('.countdown').final_countdown();
   $('.user-list').length && getInfo();
+  $('#js-countdown').length && initCountdown();
 });
 
 $(window).on('resize', function () {
@@ -89,33 +89,6 @@ $(window).on('resize', function () {
   }
 
 }).trigger('resize');
-
-function initCountdown() {
-  $(".countdown").each(function () {
-    $(this).countdown($(this).data("date"), function (event) {
-      var days = $(this).data("days");
-
-      $(this).html(
-        event.strftime(
-          `<div class="days timer">
-              <span class="count">%D</span>
-              <svg class="sc-gipzik eWSWRV"><path fill="none" stroke="#777" stroke-width="2" stroke-linejoin="round" d="M 59.904006939875586 5.0000837697691765 A 55 55 0 1 0 60 5"></path><path fill="none" stroke="#ffe928" stroke-width="10" stroke-linejoin="round" d="M 107.63139720814414 87.5 A 55 55 0 0 0 60 5"></path></svg>
-              <span class="label"> ${days} </span>              
-            </div>
-            <div class="hours timer">
-              <span class="count"> %H : </span>                          
-            </div>
-            <div class="minutes timer">
-              <span class="count"> %M : </span>              
-            </div>
-            <div class="seconds timer">
-              <span class="count"> %S </span>              
-            </div>`
-        )
-      );
-    });
-  });
-}
 
 
 function getInfo() {

@@ -182,19 +182,45 @@
             <div class="countdown-title">
               ДО СТАРТА ОСТАЛОСЬ
             </div>
-            <div class="countdown countdown-container"
-     data-start="04 Jan 2021 00:12:00 GMT"
-     data-end="27 Mar 2021 00:12:00 GMT"
-     data-border-color="rgba(255, 233, 40, 1)">
+            <div 
+    id="js-countdown"
+    class="countdown countdown-container"
+    data-time="Feb 27, 2021 00:00:00"
+    data-radius="55">
+
+
+
 
     <div class="clock-row">
         <div class="clock-item clock-days countdown-time-value">
             <div class="wrap">
                 <div class="inner">
-                    <div id="canvas-days" class="clock-canvas"></div>
-
+                    <svg                          
+                        viewbox="0 0 120 120" 
+                        width="120" 
+                        height="120" 
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle  
+                            stroke="#777" 
+                            stroke-width="2" 
+                            fill="none" 
+                            cx="60" 
+                            cy="60" 
+                            r="55"/>
+                        <circle 
+                            class="clock-circle"
+                            id="circle-days"
+                            stroke="#ffe928" 
+                            stroke-width="10" 
+                            stroke-dasharray="134,345" 
+                            stroke-linejoin="round" 
+                            fill="none" 
+                            cx="60" 
+                            cy="60" 
+                            r="55" />
+                    </svg>
                     <div class="text">
-                        <p class="val">0</p>
+                        <p class="val"><span id="days">0</span></p>
                         <p class="type-days type-time">Дней</p>
                     </div><!-- /.text -->
                 </div><!-- /.inner -->
@@ -204,10 +230,33 @@
         <div class="clock-item clock-hours countdown-time-value">
             <div class="wrap">
                 <div class="inner">
-                    <div id="canvas-hours" class="clock-canvas"></div>
+                    <svg                          
+                        viewbox="0 0 120 120" 
+                        width="120" 
+                        height="120" 
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle  
+                            class="clock-circle"
+                            stroke="#777" 
+                            stroke-width="2" 
+                            fill="none" 
+                            cx="60" 
+                            cy="60" 
+                            r="55"/>
+                        <circle 
+                        id="circle-hours" 
+                            stroke="#ffe928" 
+                            stroke-width="10" 
+                            stroke-dasharray="134,345" 
+                            stroke-linejoin="round" 
+                            fill="none" 
+                            cx="60" 
+                            cy="60" 
+                            r="55" />
+                    </svg>
 
                     <div class="text">
-                        <p class="val">0</p>
+                        <p class="val"><span id="hours">0</span></p>
                         <p class="type-hours type-time">Часов</p>
                     </div><!-- /.text -->
                 </div><!-- /.inner -->
@@ -217,10 +266,33 @@
         <div class="clock-item clock-minutes countdown-time-value">
             <div class="wrap">
                 <div class="inner">
-                    <div id="canvas-minutes" class="clock-canvas"></div>
+                    <svg                          
+                        viewbox="0 0 120 120" 
+                        width="120" 
+                        height="120" 
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle  
+                            stroke="#777" 
+                            stroke-width="2" 
+                            fill="none" 
+                            cx="60" 
+                            cy="60" 
+                            r="55"/>
+                        <circle 
+                            class="clock-circle"
+                            id="circle-minutes" 
+                            stroke="#ffe928" 
+                            stroke-width="10" 
+                            stroke-dasharray="134,345" 
+                            stroke-linejoin="round" 
+                            fill="none" 
+                            cx="60" 
+                            cy="60" 
+                            r="55" />
+                    </svg>
 
                     <div class="text">
-                        <p class="val">0</p>
+                        <p class="val"><span id="minutes">0</span></p>
                         <p class="type-minutes type-time">Минут</p>
                     </div><!-- /.text -->
                 </div><!-- /.inner -->
@@ -230,10 +302,29 @@
         <div class="clock-item clock-seconds countdown-time-value">
             <div class="wrap">
                 <div class="inner">
-                    <div id="canvas-seconds" class="clock-canvas"></div>
+                    <svg viewbox="0 0 120 120" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+                        <circle  
+                            stroke="#777" 
+                            stroke-width="2" 
+                            fill="none" 
+                            cx="60" 
+                            cy="60" 
+                            r="55"/>
+                        <circle 
+                            class="clock-circle"
+                            id="circle-seconds" 
+                            stroke="#ffe928" 
+                            stroke-width="10" 
+                            stroke-dasharray="134,345" 
+                            stroke-linejoin="round" 
+                            fill="none" 
+                            cx="60" 
+                            cy="60" 
+                            r="55"/>
+                    </svg>
 
                     <div class="text">
-                        <p class="val">0</p>
+                        <p class="val"><span id="seconds">0</span></p>
                         <p class="type-seconds type-time">Секунд</p>
                     </div><!-- /.text -->
                 </div><!-- /.inner -->
