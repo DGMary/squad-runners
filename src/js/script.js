@@ -74,6 +74,7 @@ $(document).ready(function () {
   }
   
   $('.user-list').length && getInfo();
+  $('.user-list').length && getInfoRaces();
   $('#js-countdown').length && initCountdown();
 });
 
@@ -93,7 +94,7 @@ $(window).on('resize', function () {
 
 function getInfo() {
   const request = new Request('https://squad-runners.in.ua/api/users/all');
-  const myList = document.querySelector('.user-list');
+  const myList = document.querySelector('#users-list-main');
   fetch(request)
   .then(response => {    
     if (response.status === 200) {      
@@ -117,6 +118,37 @@ function getInfo() {
                               <span class="user-team">${response[i].teamName}</span>
                             </div>
                             <span class="user-distance">${response[i].kilometersThisMonth}<span>км</span></span>
+                          </a>`
+      myList.appendChild(listItem);
+    }
+  }).catch(error => {
+    console.error(error);
+  });
+}
+
+function getInfoRaces() {
+  const request = new Request('https://squad-runners.in.ua/api/users/all');
+  const myList = document.querySelector('#users-list');
+  fetch(request)
+  .then(response => {    
+    if (response.status === 200) {      
+      return response.json();      
+    } else {
+      throw new Error('Что-то пошло не так на API сервере.');
+    }
+  })
+  .then(response => {
+    myList.classList.remove('loader');
+    for (var i = 0; i < 15; i++) {
+      var listItem = document.createElement('li');
+      listItem.classList.add('user-list-item');
+      listItem.innerHTML = `<a class="user-list-link" href="/users/642/info">                            
+                              <span class="user-list-index">${i+1}</span>
+                              <div class="user-list-img">
+                                <img src="${response[i].avatar}">
+                              </div>
+                              <span>${response[i].fullname}</span>
+                              <span class="user-list-team"><span>${response[i].teamName}</span></span>                                                       
                           </a>`
       myList.appendChild(listItem);
     }
