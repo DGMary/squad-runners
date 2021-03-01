@@ -290,15 +290,16 @@
       }
       .user {
         &-index {
-          font-size: 18px;
+          font-size: 16px;
         }
         &-img {
           margin-right: 15px;
           width: 5rem;
           height: 5rem;
         }
+        &-distance,
         &-link {
-          font-size: 18px;
+          font-size: 16px;
         }
       }
     }
