@@ -146,9 +146,95 @@
     }
   }
   &s-section {
-    .user-list {
-      margin: 40px 0 80px;
+    .container {
+      overflow-x: auto;
     }
+    .user {
+      &-list {
+        margin: 40px 0 80px;
+        &-item {
+          width: 100%;
+          max-width: 100%;
+        }
+        &-top {
+          margin: 20px 0 10px;
+        }
+      }
+      &-link {
+        padding: 0;
+        font-weight: 400;
+        font-size: 20px;
+        padding: 5px 0;
+        border-bottom: 1px solid #a0a0a0;
+        &:hover {
+          background-color: $yellow;
+        }
+        span {
+          display: inline-flex;
+        }
+      }
+      &-img {
+        margin-left: auto;
+      }
+      &-index {
+        font-size: 20px;
+        display: inline-flex;
+      }
+      &-distance {
+        font-size: 20px;
+      }
+      &-team {
+        margin: 0;
+      }
+    }
+    .col {
+      &-1 {
+        width: 220px;
+        display: flex;
+        align-items: center;
+      }
+      &-2 {
+        width: calc(100% - 660px);      
+      }
+      &-3 {
+        width: 220px;
+      }
+      &-4 {
+        width: 220px;
+      }
+      &-item {
+        cursor: pointer;
+        padding: 10px 0;       
+        span {
+          position: relative;
+          &:after {
+            content:"";
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;  
+            border-top: 7px solid #000;
+            position: absolute;
+            top: 8px;
+            right: -15px;
+          }
+        }
+        &.active {
+          span {
+            &:after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  &-list {
+    &-top {
+      display: flex;  
+    }
+  }
+  &-container {
+    min-width: 900px;
+    width: 900px;
   }
 }
 @media(min-width:768px) {
@@ -186,6 +272,40 @@
     }
     &-index {
       display: none;
+    }
+    &s-section {
+      .col {
+        &-1 {
+          width: 120px;
+        }
+        &-2 {
+          width: calc(100% - 360px);      
+        }
+        &-3 {
+          width: 120px;
+        }
+        &-4 {
+          width: 120px;
+        }
+      }
+      .user {
+        &-index {
+          font-size: 18px;
+        }
+        &-img {
+          margin-right: 15px;
+          width: 5rem;
+          height: 5rem;
+        }
+        &-link {
+          font-size: 18px;
+        }
+      }
+    }
+    &-container {
+      min-width: 600px;
+      width: 100%;
+      padding: 0 10px 0 0;
     }
   }
 }
